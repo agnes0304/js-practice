@@ -10,12 +10,22 @@ const deleteModal = document.getElementById('delete-modal');
 
 const movies = [];
 
+// 나중에 다른 곳에서도 쓸 수 있게 만드려고
+const toggleBackdrop = () => {
+    backdrop.classList.toggle('visible');
+};
+
 const updateUI = () => {
     if (movies.length === 0){
         entrytextSection.style.display = 'block';
     } else {
         entrytextSection.style.display = 'none';
     }
+};
+
+const closeMovieDeletionModal = () => {
+    toggleBackdrop();
+    deleteModal.classList.remove('visible');
 };
 
 const deleteMovieHandler = (movieId) => {
@@ -29,12 +39,9 @@ const deleteMovieHandler = (movieId) => {
     movies.splice(movieIndex, 1);
     const listRoot = document.getElementById('movie-list');
     listRoot.children[movieIndex].remove();
-}
-
-const closeMovieDeletionModal = () => {
-    toggleBackdrop();
-    deleteModal.classList.remove('visible');
-}
+    closeMovieDeletionModal();
+    updateUI();
+};
 
 const startDeleteMovieHandler = (movieId) => {
     // 008 are you sure에서 yes를 클릭하면 삭제할 것.
@@ -69,11 +76,6 @@ const renderNewMovie = (id, title, imageUrl, rating) => {
     listRoot.append(newMovieEl);
 };
 
-// 나중에 다른 곳에서도 쓸 수 있게 만드려고
-const toggleBackdrop = () => {
-    backdrop.classList.toggle('visible');
-};
-
 const closeMovieModal = () => {
     addMovieModal.classList.remove('visible');
     toggleBackdrop();
@@ -94,6 +96,7 @@ const clearInput = () => {
 const cancelModalHandler = () => {
     closeMovieModal();  
     clearInput();
+    toggleBackdrop();
 };
 
 const addMovieHandler = () => {
@@ -136,6 +139,7 @@ const backdropClickHandler = () =>{
     closeMovieModal();
     closeMovieDeletionModal();
     toggleBackdrop();
+    clearInput();
 };
 
 // 001 add modal 버튼 클릭 -> id=add-modal, backdrop에 .visible 추가
