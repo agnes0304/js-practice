@@ -18,7 +18,7 @@ const updateUI = () => {
     }
 };
 
-const deleteMovie = (movieId) => {
+const deleteMovieHandler = (movieId) => {
     let movieIndex = 0;
     for (const movie of movies){
         if (movie.id === movieId){
@@ -31,18 +31,21 @@ const deleteMovie = (movieId) => {
     listRoot.children[movieIndex].remove();
 }
 
-const cancelMovieDeletionModal = () => {
+const closeMovieDeletionModal = () => {
     toggleBackdrop();
     deleteModal.classList.remove('visible');
 }
 
-const deleteMovieHandler = (movieId) => {
+const startDeleteMovieHandler = (movieId) => {
     // 008 are you sure에서 yes를 클릭하면 삭제할 것.
     deleteModal.classList.add('visible'); 
     toggleBackdrop();
 
-
-    // deleteMovie(movieId);
+    const cancelDeletionBtn = deleteModal.querySelector('.btn--passive');
+    const confirmDeletionBtn = deleteModal.querySelector('.btn--danger');
+    
+    cancelDeletionBtn.addEventListener('click', closeMovieDeletionModal);
+    confirmDeletionBtn.addEventListener('click', deleteMovieHandler.bind(null,movieId));
 };
 
 // 006 화면에 영화 항목 렌더링
@@ -61,7 +64,7 @@ const renderNewMovie = (id, title, imageUrl, rating) => {
     `;
     
     // 007 영화 항목 삭제
-    newMovieEl.addEventListener('click', deleteMovieHandler.bind(null, id));
+    newMovieEl.addEventListener('click', startDeleteMovieHandler.bind(null, id));
     const listRoot = document.getElementById('movie-list');
     listRoot.append(newMovieEl);
 };
@@ -131,7 +134,7 @@ const addMovieHandler = () => {
 
 const backdropClickHandler = () =>{
     closeMovieModal();
-    cancelMovieDeletionModal();
+    closeMovieDeletionModal();
     toggleBackdrop();
 };
 
