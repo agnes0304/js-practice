@@ -6,6 +6,7 @@ const cancelModalBtn = addMovieModal.querySelector('.btn--passive'); //addMovieM
 const addModalbtn = cancelModalBtn.nextElementSibling;
 const inputs = addMovieModal.querySelectorAll('input');
 const entrytextSection = document.getElementById('entry-text');
+const deleteModal = document.getElementById('delete-modal'); 
 
 const movies = [];
 
@@ -17,7 +18,7 @@ const updateUI = () => {
     }
 };
 
-const deleteMovieHandler = (movieId) => {
+const deleteMovie = (movieId) => {
     let movieIndex = 0;
     for (const movie of movies){
         if (movie.id === movieId){
@@ -28,6 +29,20 @@ const deleteMovieHandler = (movieId) => {
     movies.splice(movieIndex, 1);
     const listRoot = document.getElementById('movie-list');
     listRoot.children[movieIndex].remove();
+}
+
+const cancelMovieDeletionModal = () => {
+    toggleBackdrop();
+    deleteModal.classList.remove('visible');
+}
+
+const deleteMovieHandler = (movieId) => {
+    // 008 are you sure에서 yes를 클릭하면 삭제할 것.
+    deleteModal.classList.add('visible'); 
+    toggleBackdrop();
+
+
+    // deleteMovie(movieId);
 };
 
 // 006 화면에 영화 항목 렌더링
@@ -56,8 +71,13 @@ const toggleBackdrop = () => {
     backdrop.classList.toggle('visible');
 };
 
-const toggleModal = () => {
-    addMovieModal.classList.toggle('visible'); // toggle()메서드는 내가 원하는 클래스가 있으면 없애고, 없으면 추가하는 애임
+const closeMovieModal = () => {
+    addMovieModal.classList.remove('visible');
+    toggleBackdrop();
+}
+
+const showMovieModal = () => {
+    addMovieModal.classList.add('visible'); // toggle()메서드는 내가 원하는 클래스가 있으면 없애고, 없으면 추가하는 애임
     toggleBackdrop();
 };
 
@@ -69,7 +89,7 @@ const clearInput = () => {
 };
 
 const cancelModalHandler = () => {
-    toggleModal();  
+    closeMovieModal();  
     clearInput();
 };
 
@@ -98,7 +118,7 @@ const addMovieHandler = () => {
     };
 
     movies.push(newMovie);
-    toggleModal();
+    closeMovieModal();
     clearInput();
     renderNewMovie(
         newMovie.id, 
@@ -110,11 +130,13 @@ const addMovieHandler = () => {
 }
 
 const backdropClickHandler = () =>{
-    toggleModal();
+    closeMovieModal();
+    cancelMovieDeletionModal();
+    toggleBackdrop();
 };
 
 // 001 add modal 버튼 클릭 -> id=add-modal, backdrop에 .visible 추가
-startAddMovieBtn.addEventListener('click', toggleModal);
+startAddMovieBtn.addEventListener('click', showMovieModal);
 
 // 002 Cancel, 배경 클릭 -> 모달 종료
 backdrop.addEventListener('click',backdropClickHandler);
