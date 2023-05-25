@@ -2,17 +2,8 @@ import classes from "./NewPost.module.css";
 
 import { useState } from "react";
 
-function NewPost() {
-  const [body, setBody] = useState("");
-  const [author, setAuthor] = useState("");
-
-  function bodyHandler(event) {
-    setBody(event.target.value);
-  }
-
-  function authorHandler(event) {
-    setAuthor(event.target.value);
-  }
+function NewPost(props) {
+  
 
   function submitHandler(event) {
     event.preventDefault();
@@ -33,7 +24,7 @@ function NewPost() {
           id="body"
           rows={3}
           placeholder="Leave your message here"
-          onChange={bodyHandler}
+          onChange={props.bodyChange}
         ></textarea>
       </p>
       <p>
@@ -44,7 +35,7 @@ function NewPost() {
           type="text"
           id="name"
           placeholder="Leave your name here"
-          onChange={authorHandler}
+          onChange={props.authorChange}
         ></input>
       </p>
       <p className={classes.actions}>
