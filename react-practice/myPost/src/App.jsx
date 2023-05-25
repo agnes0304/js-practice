@@ -1,14 +1,16 @@
 // import { useState } from 'react'
-import './App.css'
-import PostsList from './components/PostsList'
-
+import "./App.css";
+import PostsList from "./components/PostsList";
+import MainHeader from "./components/MainHeader";
 function App() {
-
   return (
     <>
-      <PostsList />
+      <MainHeader />
+      <main>
+        <PostsList />
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
