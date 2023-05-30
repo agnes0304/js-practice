@@ -4,6 +4,7 @@
   padding-left: 0;
   max-width: 60rem;
   gap: 1rem;
+  margin: 0 auto;
   grid-template-columns: repeat(3, 30%);
   justify-content: center;
 }
