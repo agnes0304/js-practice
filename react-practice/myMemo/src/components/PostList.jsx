@@ -4,6 +4,7 @@ import NewPost from "./NewPost";
 import Post from "./Post";
 import classes from "./Postlist.module.css";
 import Modal from "./Modal";
+import Detail from "./Detail";
 
 function PostList(props) {
   
@@ -35,6 +36,8 @@ function PostList(props) {
 					<p>Leave your message here!</p>
 				</div>
 			)}
+
+      <Detail />
     </>
   );
 }
