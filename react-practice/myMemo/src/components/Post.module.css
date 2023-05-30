@@ -22,6 +22,11 @@
   padding-bottom: 0.5rem;
 }
 
+li:hover {
+  transform: translateY(2px);
+}
+
+
 /* 이건 아직 뭔지 모르겠음 */
 /* .post에 있는거 같은데 어떻게 사용하는지 모르겠음 */
 @keyframes animate-in {
@@ -34,4 +39,5 @@
       transform: translateY(0);
     }
   }
+
 
