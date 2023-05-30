@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+
+:root {
+  overflow-wrap: break-word;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #B799FF;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+}

@@ -1,0 +1,37 @@
+/* post card 스타일 */
+.post {
+  background-color: #a084e1;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  animation: animate-in 1s ease-out forwards;
+  list-style: none;
+}
+
+.author {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #593884;
+  font-style: italic;
+  padding-top: 0.5rem;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #e6fffd;
+  padding-bottom: 0.5rem;
+}
+
+/* 이건 아직 뭔지 모르겠음 */
+/* .post에 있는거 같은데 어떻게 사용하는지 모르겠음 */
+@keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
