@@ -9,7 +9,7 @@ import Modal from "./components/Modal";
 
 function App() {
 
-  const [isView, setView] = useState(true);
+  const [isView, setView] = useState(false);
 
   function hideModal() {
     setView(false);
@@ -21,8 +21,8 @@ function App() {
 
   return (
     <>
-      <Header onStopPost={hideModal} onCreatePost={showModal} onPosting={isView} />
-      <PostList />
+      <Header onCreatePost={showModal} />
+      <PostList onStopPost={hideModal} onCreatePost={showModal} onPosting={isView} />
     </>
   );
 }
