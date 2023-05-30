@@ -4,10 +4,9 @@ import Post from "./Post";
 import classes from "./Postlist.module.css";
 import Modal from "./Modal";
 
-function PostList() {
+function PostList(props) {
   const [enteredName, setName] = useState("");
   const [enteredBody, setBody] = useState("");
-  const [isView, setView] = useState(true);
 
   function onNameHandler(event) {
     setName(event.target.value);
@@ -17,14 +16,10 @@ function PostList() {
     setBody(event.target.value);
   }
 
-  function hideModal() {
-    setView(false);
-  }
-
   return (
     <>
-      {isView ? (
-        <Modal onClose={hideModal}>
+      { props.onPosting ? (
+        <Modal onClose={props.onStopPost}>
           <NewPost nameHandler={onNameHandler} bodyHandler={onBodyHandler} />
         </Modal>
       ) : null}

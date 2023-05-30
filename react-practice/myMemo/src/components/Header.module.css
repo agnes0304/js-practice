@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    color: #E6FFFD;
+    font-weight: 600;
+    font-size: 5rem;
+}
+
+.button {
+    border: none;
+    border-radius: 8px;
+    background-color: #AEE2FF;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.button:hover {
+    background-color: #90cbec;
+}
+
+.button:active {
+    background-color: #90cbec;
+    transform: translateY(2px);
+}

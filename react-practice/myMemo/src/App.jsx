@@ -8,9 +8,20 @@ import NewPost from "./components/NewPost";
 import Modal from "./components/Modal";
 
 function App() {
+
+  const [isView, setView] = useState(true);
+
+  function hideModal() {
+    setView(false);
+  }
+
+  function showModal() {
+    setView(true);
+  }
+
   return (
     <>
-      <Header />
+      <Header onStopPost={hideModal} onCreatePost={showModal} onPosting={isView} />
       <PostList />
     </>
   );
