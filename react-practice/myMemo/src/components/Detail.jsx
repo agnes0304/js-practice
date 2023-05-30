@@ -2,14 +2,14 @@ import classes from "./Detail.module.css";
 
 function Detail(props) {
   return (
-    <div>
+    <div className={classes.card}>
       <section className={classes.header}>
         <h2 className={classes.author}>{props.name}</h2>
-        <div className={classes.button}>
-          <button>
+        <div>
+          <button className={classes.button}>
             <img src="src/assets/edit.png" alt="edit icon" />
           </button>
-          <button>
+          <button className={classes.button}>
             <img src="src/assets/remove.png" alt="remove icon" />
           </button>
         </div>

@@ -1,12 +1,11 @@
 .card {
-    background-color: #a084e1;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    width: 30rem;
-    padding: 0.5rem;
-    margin: 2rem auto;
-  }
-
+  background-color: #a084e1;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  width: 30rem;
+  padding: 0.5rem;
+  margin: 2rem auto;
+}
 
 .header {
   display: flex;
@@ -15,14 +14,15 @@
 }
 
 .author {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #593884;
-    font-style: italic;
-    padding-top: 0.5rem;
-  }
+  font-size: 1rem;
+  font-weight: 400;
+  color: #593884;
+  font-style: italic;
+  padding-top: 0.5rem;
+}
 
 .button {
+  gap: 0.25rem;
   border: none;
   cursor: pointer;
   background-color: transparent;
@@ -32,8 +32,8 @@
   background-color: #9778df;
 }
 .button:active {
-    background-color: #8065be;
-    transform: translateY(2px);
+  background-color: #8065be;
+  transform: translateY(2px);
 }
 
 img {
@@ -41,8 +41,8 @@ img {
 }
 
 .text {
-    font-size: 1rem;
-    font-weight: 300;
-    color: #e6fffd;
-    padding-bottom: 0.5rem;
-  }
+  font-size: 1rem;
+  font-weight: 300;
+  color: #e6fffd;
+  padding-bottom: 0.5rem;
+}
