@@ -4,9 +4,9 @@ function Modal(props) {
   return (
     <>
       <div className={classes.backdrop} onClick={props.onClose}></div>
-      <div className={classes.modal}>
+      <dialog open className={classes.modal}>
         {props.children}
-      </div>
+      </dialog>
     </>
   );
 }
