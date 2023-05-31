@@ -1,6 +1,6 @@
 /* post card 스타일 */
 .post {
-  background-color: #a084e1;
+  background-color: rgba(250, 250, 250, 0.7);
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   animation: animate-in 1s ease-out forwards;
@@ -10,7 +10,7 @@
 .author {
   font-size: 0.8rem;
   font-weight: 400;
-  color: #593884;
+  color: #11009E;
   font-style: italic;
   padding-top: 0.5rem;
 }
@@ -18,7 +18,7 @@
 .text {
   font-size: 1rem;
   font-weight: 300;
-  color: #e6fffd;
+  color: white;
   padding-bottom: 0.5rem;
 }
 

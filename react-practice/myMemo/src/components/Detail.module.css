@@ -1,5 +1,5 @@
 .card {
-  background-color: #a084e1;
+  background-color: rgba(250,250,250,0.6);
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   width: 30rem;
@@ -29,10 +29,10 @@
 }
 
 .button:hover {
-  background-color: #9778df;
+  background-color: rgba(250,250,250,0.8);
 }
 .button:active {
-  background-color: #8065be;
+  background-color: rgba(250,250,250,0.8);
   transform: translateY(2px);
 }
 
@@ -43,7 +43,7 @@ img {
 .text {
   font-size: 1rem;
   font-weight: 300;
-  color: #e6fffd;
+  color: white;
   padding-bottom: 0.5rem;
   text-align: left;
 }
