@@ -3,7 +3,7 @@
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   width: 30rem;
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 2rem auto;
 }
 
@@ -45,4 +45,5 @@ img {
   font-weight: 300;
   color: #e6fffd;
   padding-bottom: 0.5rem;
+  text-align: left;
 }

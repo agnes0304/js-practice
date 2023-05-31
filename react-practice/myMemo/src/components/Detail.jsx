@@ -4,7 +4,7 @@ function Detail(props) {
   return (
     <div className={classes.card}>
       <section className={classes.header}>
-        <h2 className={classes.author}>{props.name}</h2>
+        <h2 className={classes.author}>{props.data.name}</h2>
         <div>
           <button className={classes.button}>
             <img src="src/assets/edit.png" alt="edit icon" />
@@ -14,7 +14,7 @@ function Detail(props) {
           </button>
         </div>
       </section>
-      <p className={classes.text}>{props.body}</p>
+      <p className={classes.text}>{props.data.body}</p>
     </div>
   );
 }

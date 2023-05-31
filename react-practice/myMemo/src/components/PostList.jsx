@@ -1,19 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import NewPost from "./NewPost";
 import Post from "./Post";
 import classes from "./Postlist.module.css";
 import Modal from "./Modal";
-import Detail from "./Detail";
+
 
 function PostList(props) {
   const [posts, setPost] = useState([]);
   // const [isFetching, setIsFetching] = useState(false);
 
+  // useEffect(() => {
+  //   fetch("http://localhost/:3000")
+  //     .then((res) => res.json())
+  //     // .then((data) => console.log(data))
+  //     .then((data) => setPosts(data.posts))
+  //     .catch((err) => console.log(err));
+  // }, []);
+
   // useEffect(()=>{
   // 	async function fetchPosts() {
   // 		setIsFetching(true);
-  // 		const response = await fetch('http://localhost:3000/');
+  // 		const response = await fetch('http://localhost/:5173');
   // 		const resData = await response.json();
   // 		setPosts(resData.posts);
   // 		setIsFetching(false);
@@ -41,7 +49,7 @@ function PostList(props) {
       ) : null}
 
       {/* {!isFetching && posts.length > 0 && ( */}
-      {posts.length > 0 && (
+      { posts.length > 0 && (
         <ul className={classes.posts}>
           {posts.map((data) => (
             <Post key={data.body.length} name={data.name} body={data.body} />
@@ -63,7 +71,7 @@ function PostList(props) {
         </div>
       )} */}
 
-      <Detail />
+      {/* <Detail /> */}
     </>
   );
 }

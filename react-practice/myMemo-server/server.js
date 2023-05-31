@@ -15,4 +15,4 @@ app.use((req, res, next)=>{
 
 app.use(routes);
 
-app.listen(5000);
+app.listen(3000);
