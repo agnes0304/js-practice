@@ -12,6 +12,9 @@ function Detail(props) {
           <button className={classes.button}>
             <img src="src/assets/remove.png" alt="remove icon" />
           </button>
+          <button className={classes.button} onClick={props.onClose}>
+            <img src="src/assets/cancel.png" alt="cancel icon" />
+          </button>
         </div>
       </section>
       <p className={classes.text}>{props.data.body}</p>

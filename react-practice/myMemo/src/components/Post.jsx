@@ -6,9 +6,9 @@ import Modal from "./Modal";
 
 function Post(props) {
   const [data, setData] = useState({});
+  const [isData, setisData] = useState(false);
 
   function viewMore(event) {
-    console.log(event.target);
     let dname = event.currentTarget.querySelector(
       `.${classes.author}`
     ).textContent;
@@ -19,9 +19,11 @@ function Post(props) {
       name: dname,
       body: dbody,
     };
-    console.log(dname);
-    console.log(dbody);
+    setisData(true);
     setData(postdata);
+  }
+  function closeModal(){
+    setisData(false);
   }
 
   return (
@@ -30,7 +32,7 @@ function Post(props) {
         <h2 className={classes.author}>{props.name}</h2>
         <p className={classes.text}>{props.body}</p>
       </li>
-        <Detail data={data} />
+      { isData ? <Modal><Detail data={data} onClose={closeModal} /></Modal> : null}
     </>
   );
 }
