@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import NewPost from './components/NewPost.jsx';
-import RootLayout from './routes/rootLayout.jsx';
+import RootLayout from './routes/RootLayout.jsx';
 
 const router = createBrowserRouter([
   { path: '/', element: <RootLayout />, children: [
