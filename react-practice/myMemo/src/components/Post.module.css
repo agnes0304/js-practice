@@ -1,6 +1,6 @@
 /* post card 스타일 */
 .post {
-  background-color: rgba(250, 250, 250, 0.7);
+  background-color: #8c6fff;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   animation: animate-in 1s ease-out forwards;

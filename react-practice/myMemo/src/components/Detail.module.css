@@ -1,5 +1,5 @@
 .card {
-  background-color: rgba(250,250,250,0.6);
+  background-color: #8149fa;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   width: 30rem;
@@ -16,28 +16,30 @@
 .author {
   font-size: 1rem;
   font-weight: 400;
-  color: #593884;
+  color: rgba(256,256,256, 0.6);
   font-style: italic;
   padding-top: 0.5rem;
 }
 
 .button {
   gap: 0.25rem;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   background-color: transparent;
 }
 
 .button:hover {
-  background-color: rgba(250,250,250,0.8);
+  background-color: #8149fa;
 }
 .button:active {
-  background-color: rgba(250,250,250,0.8);
+  background-color: #8149fa;
+  box-shadow: inset 1px 1px 10px 1px #11009e;
   transform: translateY(2px);
 }
 
 img {
-  width: 1rem;
+  width: 0.8rem;
 }
 
 .text {

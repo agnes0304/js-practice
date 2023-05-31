@@ -19,7 +19,7 @@
     padding: 0.4rem 1rem;
     border: none;
     border-radius: 8px;
-    background-color: #C4B0FF;
+    background-color: #36179e;
     cursor: pointer;
     font-weight: 500;
     font-size: 1.2rem;
@@ -27,11 +27,12 @@
 }
 
 .button:hover {
-    background-color: #8696fe;
+    background-color: #6d42e4;
 }
 
 .button:active {
-    background-color: #8696fe;
+    background-color: #6d42e4;
+    box-shadow: inset 1px 1px 10px 1px #11009e;
     transform: translateY(2px);
 }
 

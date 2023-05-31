@@ -1,5 +1,5 @@
 .form {
-    background-color: #11009E;
+    background-color: #8149fa;
     border-radius: 10px;
     width: 30rem;
     padding: 0.5rem;
@@ -8,7 +8,7 @@
 
 .form label {
     display: block;
-    color: rgba(250,250,250, 0.5);
+    color: rgba(256,256,256, 0.8);
     text-align: left;
     font-weight: 300;
     padding-top: 0.5rem;
@@ -20,7 +20,7 @@
     display: block;
     font: inherit;
     color: #593884;
-    background-color:#d4c8f1 ;
+    background-color:rgba(256,256,256, 0.85);
     border: none;
     border-radius: 8px;
     width: 100%;
@@ -34,7 +34,7 @@
 }
 
 .actions button {
-    background-color: #c4b0ff;
+    background-color: #ffffff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -45,11 +45,12 @@
 
 
 .actions button:hover {
-    background-color: #8696FE;
+    background-color: #8149fa;
 }
 
 .actions button:active {
-    background-color: #8696FE;
+    background-color: #8149fa;
+    box-shadow: inset 2px 2px 10px 2px ;
     transform: translateY(2px);
 }
 
