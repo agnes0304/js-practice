@@ -20,7 +20,7 @@ function App() {
       <main>
         <PostList
           onStopPost={hideModal}
-          onCreatePost={showModal}
+          // onCreatePost={showModal}
           onPosting={isView}
         />
       </main>
