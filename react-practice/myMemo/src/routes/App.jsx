@@ -30,7 +30,7 @@ function App() {
 export default App;
 
 export async function loader() {
-  const res = await fetch("http://localhost/:8080");
+  const res = await fetch("http://localhost/:8080/posts");
   const resData = await res.json();
   return resData.posts;
 }

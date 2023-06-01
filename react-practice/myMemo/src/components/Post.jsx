@@ -29,7 +29,7 @@ function Post(props) {
   return (
     <>
       <li className={classes.post} onClick={viewMore}>
-        <h2 className={classes.author}>{props.name}</h2>
+        <h2 className={classes.author}>{props.author}</h2>
         <p className={classes.text}>{props.body}</p>
       </li>
       { isData ? <Modal><Detail data={data} onClose={closeModal} /></Modal> : null}

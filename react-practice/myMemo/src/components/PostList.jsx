@@ -10,7 +10,7 @@ function PostList(props) {
       { posts.length > 0 && (
         <ul className={classes.posts}>
           {posts.map((data) => (
-            <Post key={data.body.length} name={data.name} body={data.body} />
+            <Post key={data.body.length} author={data.author} body={data.body} />
           ))}
         </ul>
       )}

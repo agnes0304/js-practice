@@ -44,7 +44,7 @@ export async function action({request}) {
   formData.get('body')
   formData.get('author')
   const postData = Object.fromEntries(formData); // 키값 오브젝트를 만들어줘
-  await fetch('http://localhost:8080/post', {
+  await fetch('http://localhost:8080/posts', {
     method: 'POST',
     body: JSON.stringify(postData),
     headers: {
