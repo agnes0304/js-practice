@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Outlet } from "react-router-dom";
 import PostList from "../components/PostList";
 
 function App() {
@@ -15,11 +15,12 @@ function App() {
 
   return (
     <>
+      <Outlet />
       <main>
         <PostList
-          // onStopPost={hideModal}
-          // // onCreatePost={showModal}
-          // onPosting={isView}
+        // onStopPost={hideModal}
+        // // onCreatePost={showModal}
+        // onPosting={isView}
         />
       </main>
     </>
@@ -28,5 +29,9 @@ function App() {
 
 export default App;
 
-
-// 전부 주석처리함 -> PostList 로직 변경할 것. 
+export async function loader() {
+  const res = await fetch("http://localhost/:8080");
+  const resData = await res.json();
+  return resData.posts;
+}
+// 전부 주석처리함 -> PostList 로직 변경할 것.
