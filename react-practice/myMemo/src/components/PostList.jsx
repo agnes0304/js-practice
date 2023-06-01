@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Post from "./Post";
 import classes from "./Postlist.module.css";
 
-function PostList(props) {
+function PostList() {
   const posts = useLoaderData();
 
   return (
@@ -10,7 +10,7 @@ function PostList(props) {
       { posts.length > 0 && (
         <ul className={classes.posts}>
           {posts.map((data) => (
-            <Post key={data.body.length} author={data.author} body={data.body} />
+            <Post key={data.id} id={data.id} author={data.author} body={data.body} />
           ))}
         </ul>
       )}

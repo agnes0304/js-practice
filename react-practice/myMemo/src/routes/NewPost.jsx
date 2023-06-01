@@ -2,8 +2,7 @@ import classes from "./NewPost.module.css";
 import Modal from "../components/Modal";
 import { Link, Form, redirect } from "react-router-dom";
 
-function NewPost(props) {
-
+function NewPost() {
   return (
     <Modal>
       <Form method='post' className={classes.form}>
@@ -41,15 +40,13 @@ export default NewPost;
 
 export async function action({request}) {
   const formData = await request.formData();
-  formData.get('body')
-  formData.get('author')
   const postData = Object.fromEntries(formData); // 키값 오브젝트를 만들어줘
   await fetch('http://localhost:8080/posts', {
     method: 'POST',
     body: JSON.stringify(postData),
     headers: {
-      'Content-Type': 'application/json'
-    }
-  })
+      'Content-Type': 'application/json',
+    },
+  });
   return redirect('/');
 }

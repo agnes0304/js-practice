@@ -6,7 +6,7 @@ function Modal(props) {
   const nav = useNavigate(); 
   
   function closeHandler() {
-    nav('/');
+    nav('..');
     // 한단계 위로 올라가는 것을 원하면 ('..')이렇게 가정해줄 수 있다. 상대경로로
 
   }
