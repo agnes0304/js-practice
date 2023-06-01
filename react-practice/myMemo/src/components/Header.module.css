@@ -1,63 +1,62 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2rem 20%;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 20%;
 }
 
 .title {
-    color: white;
-    font-weight: 600;
-    font-size: 2.5rem;
+  color: white;
+  font-weight: 600;
+  font-size: 2.5rem;
 }
 
 .button {
-    display: inline-flex;
-    align-items:center;
-    gap: 0.3rem;
-    padding: 0.4rem 1rem;
-    border: none;
-    border-radius: 8px;
-    background-color: #36179e;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #36179e;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white;
 }
 
 hr {
-    background-color: white;
-    size: 0.8px;
-    margin: 0 10% 2rem 10%;
+  background-color: white;
+  size: 0.8px;
+  margin: 0 10% 2rem 10%;
 }
 
 .button:hover {
-    background-color: #6d42e4;
+  background-color: #6d42e4;
 }
 
 .button:active {
-    background-color: #6d42e4;
-    box-shadow: inset 1px 1px 10px 1px #11009e;
-    transform: translateY(2px);
+  background-color: #6d42e4;
+  box-shadow: inset 1px 1px 10px 1px #11009e;
+  transform: translateY(2px);
 }
 
 img {
-    width: 2rem;
+  width: 2rem;
 }
 
 @media (max-width: 768px) {
-    .header {
-        margin: 1.5rem 10%;
-    }
-    .title {
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-    .button {
-        gap: 0.2rem;
-        padding: 0.3rem 0.8rem;
-        font-weight: 400;
-        font-size: 1rem;
-    }
+  .header {
+    margin: 1.5rem 10%;
   }
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .button {
+    gap: 0.2rem;
+    padding: 0.3rem 0.8rem;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}
